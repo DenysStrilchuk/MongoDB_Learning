@@ -2,7 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-233.13135.103">
     <data-source name="@cluster0.98bnh7h.mongodb.net" uuid="e1163d30-b274-4b04-920b-b926536f1a72">
-      <database-info product="Mongo DB" version="6.0.12" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.18" dbms="MONGO" exact-version="6.0.12" exact-driver-version="1.18" />
+      <database-info product="Mongo DB" version="6.0.13" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.18" dbms="MONGO" exact-version="6.0.13" exact-driver-version="1.18" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
       <user-name>admin</user-name>
@@ -11,6 +11,25 @@
           <node kind="schema">
             <name qname="@" />
             <name qname="sep" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="@localhost" uuid="41b943e1-77e9-485c-8e8b-13235d85dddd">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MONGO" />
+      <secret-storage>master_key</secret-storage>
+      <schema-mapping />
+    </data-source>
+    <data-source name="@cluster0.98bnh7h.mongodb.net [2]" uuid="6bd87057-79c8-4b48-9176-8f56720b8393">
+      <database-info product="Mongo DB" version="6.0.13" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.18" dbms="MONGO" exact-version="6.0.13" exact-driver-version="1.18" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>admin</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="lesson2" />
           </node>
         </introspection-scope>
       </schema-mapping>

@@ -77,8 +77,26 @@ db.students.updateMany(
         $set: {avgScore: 5}
     }
     )
-
 // 16) Знайти дітей які вчаться в початковій школі (до 5 класу) і вивчають фізику ( physics )
-
-
+db.students.find({class: { $lte: 5 } , lessons: 'physics'})
+// db.students.find({
+//     $and: [
+//         { class: { $lte: 5 } }, // Вибрати класи до 5-го включно
+//         { lessons: 'physics' }   // Вибрати тих, хто вивчає фізику
+//     ]
+// })
 // 17) Знайти найуспішніший клас
+db.students.aggregate([
+    {
+        $group: {
+            _id: "$class",
+            averageScore: { $avg: "$avgScore" }
+        }
+    },
+    {
+        $sort: { averageScore: -1 }
+    },
+    {
+        $limit: 1
+    }
+])
